@@ -29,13 +29,13 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 400,
     position: "absolute",
-    borderBottomEndRadius: 300,
-    borderBottomLeftRadius: 300,
-    transform: [{ scaleX: 2 }],
+    borderBottomEndRadius: 100,
+    borderBottomLeftRadius: 400,
+    transform: [{ scaleX: 1.5 }],
   },
   content: {
     marginHorizontal: 20,
-    marginTop: 30,
+    marginTop: 60,
   },
   header: {
     flexDirection: "row",
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    top: 10,
+    top: 15,
   },
   image: {
     width: 250,
