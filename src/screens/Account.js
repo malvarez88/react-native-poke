@@ -1,10 +1,9 @@
-import { SafeAreaView, Text } from "react-native";
-import React from "react";
+import { View, Text } from "react-native";
+import LoginForm from "../components/Auth/LoginForm";
+import UserPanel from "../components/Auth/UserPanel";
 
 export default function Account() {
-  return (
-    <SafeAreaView>
-      <Text>Account</Text>
-    </SafeAreaView>
-  );
+  const auth = null;
+
+  return <View>{auth ? <UserPanel /> : <LoginForm />}</View>;
 }
