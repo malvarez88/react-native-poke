@@ -40,14 +40,17 @@ Make sure you have the following tools installed:
 
 2. Navigate to the project directory:
 
+    ```bash
     cd react-native-platzi
 
 3. Install dependencies
 
+    ```bash
     npm install
    
 5. Start the expo development server
 
+    ```bash
     npx expo start
   
 6. Use the Expo Go app on your mobile device or an emulator to run the app.
