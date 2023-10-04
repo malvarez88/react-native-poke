@@ -24,7 +24,7 @@ export default function Type(props) {
 
 const styles = StyleSheet.create({
   content: {
-    marginTop: 40,
+    marginTop: 60,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
