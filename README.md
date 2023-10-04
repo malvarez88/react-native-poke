@@ -36,12 +36,12 @@ Make sure you have the following tools installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/malvarez88/react-native-platzi.git
+   git clone https://github.com/malvarez88/react-native-poke.git
 
 2. Navigate to the project directory:
 
     ```bash
-    cd react-native-platzi
+    cd react-native-poke
 
 3. Install dependencies
 
