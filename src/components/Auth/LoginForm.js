@@ -11,9 +11,12 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { capitalize } from "lodash";
 import { user, userDetails } from "../../utils/userDB";
+import useAuth from "../../hooks/useAuth";
 
 export default function LoginForm() {
   const [error, setError] = useState("");
+  const { login, auth } = useAuth();
+
   const formik = useFormik({
     initialValues: initialValues(),
     validationSchema: Yup.object(validationSchema()),
@@ -24,6 +27,8 @@ export default function LoginForm() {
 
       if (username !== user.username || password !== user.password) {
         setError("User or Password are incorrect");
+      } else {
+        login(userDetails);
       }
     },
   });
@@ -63,8 +68,8 @@ function initialValues() {
 
 function validationSchema() {
   return {
-    username: Yup.string().required("User is required").min(8),
-    password: Yup.string().required("Password is required").min(8),
+    username: Yup.string().required("User is required").min(5),
+    password: Yup.string().required("Password is required").min(5),
   };
 }
 

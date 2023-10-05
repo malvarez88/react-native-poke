@@ -1,6 +1,6 @@
 export const user = {
   username: "pokemon",
-  password: "qwerty",
+  password: "12345",
 };
 
 export const userDetails = {
