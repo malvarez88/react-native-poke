@@ -1,10 +1,10 @@
 export const user = {
-  username: "pokemonuser",
+  username: "pokemon",
   password: "qwerty",
 };
 
 export const userDetails = {
-  username: "axKetc88",
+  username: "axKetch88",
   firstName: "Axe",
   lastName: "Ketchup",
   email: "axeketchup@pokemon.com",

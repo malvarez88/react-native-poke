@@ -6,17 +6,25 @@ import {
   Button,
   Keyboard,
 } from "react-native";
+import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { capitalize } from "lodash";
+import { user, userDetails } from "../../utils/userDB";
 
 export default function LoginForm() {
+  const [error, setError] = useState("");
   const formik = useFormik({
     initialValues: initialValues(),
     validationSchema: Yup.object(validationSchema()),
     validateOnChange: false,
     onSubmit: (formData) => {
-      console.log(formData);
+      setError("");
+      const { username, password } = formData;
+
+      if (username !== user.username || password !== user.password) {
+        setError("User or Password are incorrect");
+      }
     },
   });
 
@@ -41,6 +49,7 @@ export default function LoginForm() {
       <Button title="Submit" onPress={formik.handleSubmit} />
       <Text style={styles.error}>{capitalize(formik.errors.username)}</Text>
       <Text style={styles.error}>{capitalize(formik.errors.password)}</Text>
+      <Text style={styles.error}>{error}</Text>
     </View>
   );
 }
